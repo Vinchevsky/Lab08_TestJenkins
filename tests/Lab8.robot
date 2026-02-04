@@ -1,5 +1,5 @@
 *** Settings ***
-Library    SeleniumLibrary
+Library  SeleniumLibrary
 
 *** Keywords ***
 Open Browser To Login Page
