@@ -26,11 +26,7 @@ pipeline {
         stage('Run Robot Tests') {
             steps {
                 sh """
-                robot --outputdir ${RESULTS_DIR} \
-                      --variable BROWSER:headlesschrome \
-                      --variable REMOTE_URL:http://localhost:4444/wd/hub \
-                      --settag docker_run \
-                      tests/
+                python3 -m robot --outputdir ${RESULTS_DIR} tests/
                 """
             }
         }
